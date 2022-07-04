@@ -6,16 +6,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
-@Entity 
-public class User  implements Serializable{
+@Entity
+public class User implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1;
 	@javax.persistence.Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	private Long Id;
 	private String name;
 	private String area;
@@ -23,7 +23,7 @@ public class User  implements Serializable{
 	private String email;
 	private String password;
 	private String passwordConfirm;
-	
+
 	private User() {
 		super();
 	}
@@ -85,7 +85,5 @@ public class User  implements Serializable{
 	public void setPasswordConfirm(String passwordConfirm) {
 		this.passwordConfirm = passwordConfirm;
 	}
-	
-	
-	
+
 }

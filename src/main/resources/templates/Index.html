@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="UTF-8">
@@ -125,22 +125,21 @@
 		</table>
 	</nav>
 
-
 	<div class="container" id="form">
 
-		<form action="" method="post">
+		<form action="/users" method="post">
 			Nome Completo:<br>
-			<input type="text" id="name" placeholder=" Digite seu nome completo"><br><br>
-			Area:<br>
-			<input type="text" id="area" placeholder=" Digite sua area"><br><br>
+			<input type="text" id="name" name="name" placeholder=" Digite seu nome completo" required><br><br>
+			Area:<br> 
+			<input type="text" id="area" name="area" placeholder=" Digite sua area" required><br><br>
 			User name:<br>
-			<input type="text" id="user" placeholder=" Digite seu nome de usuario"><br><br>
+			<input type="text" id="user" name="user" placeholder=" Digite seu nome de usuario" required><br><br>
 			Email:<br>
-			<input type="email" id="email" placeholder=" Digite seu email"><br><br>
+			<input type="email" id="email" name="email" placeholder=" Digite seu email" required><br><br>
 			Password:<br>
-			<input type="password" id="senha" placeholder=" Digite sua senha"><br><br>
+			<input type="password" id="senha" name="password" placeholder=" Digite sua senha" required><br><br>
 			Confirm Password:<br>
-			<input type="password" id="senha2" placeholder=" Confirmação de senha"><br><br>
+			<input type="password" id="senha2" name="passwordConfirm" placeholder=" Confirmação de senha" required><br><br>
 
 			<button id="button" class="button" type="submit" onclick="verifica()">Registrar</button>
 		</form>
@@ -148,11 +147,11 @@
 
 	<div class="container2" id="form2">
 
-		<form action="" method="post">
+		<form action="/users" method="post">
 			Login:<br>
-			<input type="text" id="login" placeholder=" Digite seu login"><br><br>
+			<input type="text" id="login" name="name" placeholder=" Digite seu login" required><br><br>
 			Senha:<br>
-			<input type="password" id="senha" placeholder=" Digite sua senha"><br><br>
+			<input type="password" id="senha" name="password" placeholder=" Digite sua senha" required><br><br>
 			<button id="button2" class="button" type="submit">Login</button>
 		</form>
 	</div>
