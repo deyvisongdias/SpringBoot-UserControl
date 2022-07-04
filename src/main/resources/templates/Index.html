@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<!--<link rel="stylesheet" type="text/css" href="Style.css">-->
+	<!--<link rel="stylesheet" th:href="@{/css/myStyle.css}">-->
+	<!--<script src="Script.js"></script>-->
+	<!--<script type="text/javascript" th:src="@{Script.js}"></script>-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script>
+
+
+		function clickbutton() {
+			document.querySelector("#signup").click();
+		}
+
+		function verifica() {
+
+			var pas = document.getElementById("senha").value;
+			var pas2 = document.getElementById("senha2").value;
+			if (pas != pas2) {
+				alert("senhas diferentes");
+			}
+		}
+
+		$(document).ready(() => {
+
+			$("#signin").click(() => {
+				$("#form").show();
+				$("#form2").hide();
+			});
+
+			$("#signup").click(() => {
+				$("#form").hide();
+				$("#form2").show();
+			});
+
+		})
+
+
+	</script>
+
+	<style>
+		* {
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+		}
+
+		body {
+			font-family: 'Trebuchet MS', sans-serif;
+			background-color: rgb(231, 228, 228);
+			height: 700px;
+		}
+
+		nav {
+			background-image: src=("background.png");
+			width: 100%;
+			height: 80px;
+			border: solid 1px;
+		}
+
+		.container {
+			height: 480px;
+			width: 430px;
+			border: solid 1px;
+			margin: 0 auto 0 auto;
+			margin-top: 50px;
+			background-color: white;
+		}
+
+		.container2 {
+			height: 230px;
+			width: 430px;
+			border: solid 1px;
+			margin: 0 auto 0 auto;
+			margin-top: 50px;
+			background-color: white;
+		}
+
+		input {
+			border: solid 1px;
+			width: 300px;
+			height: 23px;
+		}
+
+		form {
+			padding-top: 30px;
+			padding-left: 60px;
+		}
+
+		.button {
+			background-color: darkcyan;
+			width: 100px;
+			height: 30px;
+			border: solid 1px;
+		}
+
+		.entrar {
+			color: white;
+			font-size: 18px;
+			background-image: src=("background.png");
+			width: 80px;
+			height: 25px;
+		}
+	</style>
+
+</head>
+
+<body onload="clickbutton()">
+	<nav>
+		<table>
+			<tr>
+				<td></td>
+				<td>
+					<button id="signup" class="entrar" onclick="">Sign up</button>
+					<button id="signin" class="entrar" onclick="">Sign in</button>
+				</td>
+			</tr>
+		</table>
+	</nav>
+
+
+	<div class="container" id="form">
+
+		<form action="" method="post">
+			Nome Completo:<br>
+			<input type="text" id="name" placeholder=" Digite seu nome completo"><br><br>
+			Area:<br>
+			<input type="text" id="area" placeholder=" Digite sua area"><br><br>
+			User name:<br>
+			<input type="text" id="user" placeholder=" Digite seu nome de usuario"><br><br>
+			Email:<br>
+			<input type="email" id="email" placeholder=" Digite seu email"><br><br>
+			Password:<br>
+			<input type="password" id="senha" placeholder=" Digite sua senha"><br><br>
+			Confirm Password:<br>
+			<input type="password" id="senha2" placeholder=" Confirmação de senha"><br><br>
+
+			<button id="button" class="button" type="submit" onclick="verifica()">Registrar</button>
+		</form>
+	</div>
+
+	<div class="container2" id="form2">
+
+		<form action="" method="post">
+			Login:<br>
+			<input type="text" id="login" placeholder=" Digite seu login"><br><br>
+			Senha:<br>
+			<input type="password" id="senha" placeholder=" Digite sua senha"><br><br>
+			<button id="button2" class="button" type="submit">Login</button>
+		</form>
+	</div>
+</body>
+
+</html>
